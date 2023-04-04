@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(237, 227, 211, 0.324);
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+.all{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1920px;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.video_link{
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    transition: top 2s ease;
+}
+.intro_video{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+
+/* Header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    max-width: 1920px;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+.header_inner{
+    display: flex;
+}
+.header_left{
+    display: flex;
+    align-items: center;
+}
+.home_link{
+    color: #fdfdfc;
+}
+.menu_search{
+    display: flex;
+    flex-direction: column;
+}
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #000;
+    height: 50px;
+    width: 50px;
+}
+.menu_icon{
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+}
+.search_icon{
+    fill: #fff;
+    width: 100%;
+    height: 100%;
+}
+.nav_menu:hover{
+    background-color: #282424;
+    transition: all 0.5s;
+}
+.nav_menu:hover .search_icon{
+    fill: #5d849f;
+}
+.nav_menu:hover .menu_icon{
+    stroke: #5d849f;
+}
+.header_logo{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+.header_icon{
+    height: 70px;
+    width: 70px;
+    fill: #5d849f;
+    transition: fill .5s ease;
+}
+.header_logo:hover .header_icon{
+    fill: #000;
+}
+.header_title{
+    letter-spacing: 5px;
+    margin-left: 10px;
+    color: #4a4a4a;
+    font-size: 40px;
+    font-family: 'Playfair Display SC', serif;
+    transition: color .5s ease;
+}
+.header_logo:hover .header_title{
+    color: #000;
+}
+
+
+
+
+/* Nav */
+.nav{
+    display: flex;
+    position: relative;
+    left: -200%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    transition: left 1.5s ease;
+    z-index: 20;
+}
+.nav_link{
+    text-transform: uppercase;
+    color: #fdfdfc;
+    transition: color .2s ease;
+    font-size: 14px;
+    font-family: 'Libre Baskerville', serif;
+}
+.nav_link:hover{
+    color: #5d849f;
+}
+.nav_logo{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+.nav_link_title{
+    text-transform: uppercase;
+    color: #bcbcb8e9;
+    margin-right: 30px;
+    transition: color .2s ease;
+    font-size: 15px;
+    font-family: 'Libre Baskerville', serif;
+}
+.nav_icon{
+    height: 70px;
+    width: 70px;
+    fill: #fff;
+    transition: fill .5s ease;
+}
+.nav_title{
+    color: #fff;
+    letter-spacing: 5px;
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 'Playfair Display SC', serif;
+    transition: color .5s ease;
+}
+.nav_logo:hover .nav_icon{
+    fill: #b0b0b0;
+}
+.nav_logo:hover .nav_title{
+    color: #b0b0b0;
+}
+.nav_input{
+    display: flex;
+}
+.nav_input input{
+    position: absolute;
+    width: 20%;
+    height: 50px;
+    left: -20%;
+    border: 0;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 10px;
+    transition: left 1s linear;
+}
+
+
+/* Slider */
+.slider{
+    position: relative;
+    max-width: 1920px;
+    height: 1020px;
+    padding-top: 120px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider_body{
+    position: relative;
+    display: flex;
+    width: 700%;
+    left: 0;
+    transition: left 1s linear;
+}
+.slider_img{
+    width: 14.2856%;
+    height: 900px;
+}
+.next_btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 100px;
+    height: 100px;
+}
+.next_icon{
+    height: 100%;
+    width: 100%;
+    fill: #000;
+    transition: fill 0.2s ease;
+}
+.next_btn:hover .next_icon{
+    fill: #fff;
+}
+.prev_btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 100px;
+    height: 100px;
+}
+.prev_icon{
+    width: 100%;
+    height: 100%;
+    fill: #000;
+    transition: fill 0.2s ease;
+}
+.prev_btn:hover .prev_icon{
+    fill: #fff;
+}
+.buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: #304a5c;
+}
+.first_line{
+    display: flex;
+    justify-content: space-around;
+}
+.btns{
+    text-transform: uppercase;
+    padding: 34px 25px;
+    color: #fff;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+}
+.btns:hover{
+    background-color: #446b86;
+    transition: all 1s;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.works_link{
+    text-transform: uppercase;
+    color: #fdfdfc;
+    margin-right: 30px;
+    transition: color .2s ease;
+    font-size: 14px;
+    font-family: 'Libre Baskerville', serif;
+}
+.works_link:not(:last-child){
+    margin-right: 30px;
+}
+.works_link:hover{
+    color: #5d849f;
+}
+.about{
+    text-align: center;
+    padding-top: 120px;
+    align-items: center;
+}
+.about_unifit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_title{
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #272727;
+    margin-top: 60px;
+}
+.main_text{
+    font-family: 'Merriweather', serif;
+    font-size: 23px;
+    max-width: 900px;
+    margin: 50px auto 0;
+    color: #4a4a4a;
+}
+.main_text p{
+    margin-bottom: 30px;
+}
+.main_text h1{
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: #272727;
+    margin-top: 60px;
+}
+.about_unifit h1{
+    letter-spacing: 5px;
+    margin-left: 10px;
+    color: #4a4a4a;
+    font-size: 60px;
+    font-family: 'Playfair Display SC', serif;
+    transition: color .5s ease;
+}
+.about_unifit svg{
+    width: 100px;
+    height: 100px;
+    fill: #5d849f;
+}
+.italic{
+    font-family: 'Cormorant', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #000;
+}
+.italicgeo{
+    font-family: 'Cormorant', serif;
+    font-size: 23px;
+    font-style: italic;
+    color: #000;
+}
+.news_icon{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.news{
+    padding-top: 170px;
+    padding-bottom: 150px;
+}
+.news_item{
+    margin-bottom: 150px;
+}
+.news_title{
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+.news_txt{
+    font-size: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}
+.contact{
+    font-size: 60px;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+}
+.contact_phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 150px auto 0;
+}
+.contact_mail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto 0;
+}
+.contact_phone img{
+    margin-right: 30px;
+    width: 50px;
+    height: 50px;
+}
+.contact_mail img{
+    margin-right: 30px;
+    width: 50px;
+    height: 50px;
+}
+.contact_us{
+    text-align: center;
+    padding: 200px 0;
+}
+.contact_txt{
+    font-family: 'Cormorant', serif;
+    font-size: 20px;
+    margin-top: 30px;
+}
